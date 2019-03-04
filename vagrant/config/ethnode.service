@@ -1,0 +1,8 @@
+[Unit]
+Description=Ethereum node
+
+[Service]
+Type=simple
+ExecStart=/usr/bin/geth --datadir=/home/vagrant/.ethereum/ --networkid 777 --port 30303 --rpc --rpcport 8545 --nodiscover
+[Install]
+WantedBy=default.target
