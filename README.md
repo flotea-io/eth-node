@@ -7,6 +7,6 @@ There are:
 
 - Bootnode, Stats, Wallet, Faucet (without authorization)
 - Two Sealers running on machine
-- Some pregenerated Wallets
+- Some pregenerated Wallets with test pass
 - Automated puppeth script
 - All run on one server
