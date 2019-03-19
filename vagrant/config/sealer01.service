@@ -1,0 +1,8 @@
+[Unit]
+Description=Ethereum Sealer PoA 01
+
+[Service]
+Type=simple
+ExecStart=/usr/bin/geth --networkid 777 --cache 512 --port 30502 --nat extip:192.168.66.66 --maxpeers 50  --ethstats 'sealer01:test7@stats.eth.devel' --bootnodes enode://818264acf4097e89dd7d7c3ea5fd7844a9f49389567b1ae22820464477f7897a9fb7932f690a973cde64b3815e4ed5bb0b4fe1476d67b6aae4dd616c4aef14ee@192.168.66.66:30303  --unlock 0 --password /home/vagrant/signer.pass --mine --miner.gastarget 7500000 --miner.gaslimit 10000000 --miner.gasprice 1000000000
+[Install]
+WantedBy=default.target

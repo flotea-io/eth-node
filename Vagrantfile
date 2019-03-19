@@ -1,13 +1,11 @@
 require 'yaml'
 
+#https://github.com/devopsgroup-io/vagrant-digitalocean
+
 required_plugins = %w( vagrant-hostmanager vagrant-vbguest )
 required_plugins.each do |plugin|
     system("vagrant plugin install #{plugin}", :chdir=>"/tmp") || exit! unless Vagrant.has_plugin?(plugin)
 end
-
-domains = {
-  app: 'eth.devel'
-}
 
 vagrantfile_dir_path = File.dirname(__FILE__)
 
@@ -16,6 +14,12 @@ config = {
 }
 
 options = YAML.load_file config[:local]
+
+
+domains = {
+  app: options['domain']
+}
+
 
 Vagrant.configure(2) do |config|
   config.vm.box = 'ubuntu/bionic64'
@@ -40,8 +44,8 @@ Vagrant.configure(2) do |config|
   config.hostmanager.include_offline    = true
   config.hostmanager.aliases            = domains.values
 
-  config.vm.provision 'shell', path: './vagrant/provision/once-as-root.sh', args: [options['timezone']]
-  config.vm.provision 'shell', path: './vagrant/provision/once-as-vagrant.sh', args: [], privileged: false
+  config.vm.provision 'shell', path: './vagrant/provision/as-root.sh', args: [options['timezone']]
+  config.vm.provision 'shell', path: './vagrant/provision/as-vagrant.sh', args: [options['domain']], privileged: false
   config.vm.provision 'shell', path: './vagrant/provision/always-as-root.sh', run: 'always'
 
 end

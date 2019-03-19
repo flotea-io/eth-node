@@ -6,10 +6,12 @@ function info {
   echo " "
 }
 
-info "Restart web-stack"
-service nginx restart
-service ethnode start
+info "Start EthNode"
+#service ethnode start
+#service sealer01 start
+#service sealer02 start
+
 
 info "Main - Hello Dev - You probably can try do something now"
 echo "Provision-script user: `whoami`"
-echo "IP: 192.168.66.66"
+echo "IP: "
