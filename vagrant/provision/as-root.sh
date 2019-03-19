@@ -18,7 +18,7 @@ apt-get update
 apt-get upgrade -y
 
 info "Install additional software"
-apt-get install -y git curl bison build-essential g++ docker.io docker-compose
+apt-get install -y git curl bison build-essential g++ docker.io docker-compose expect
 
 info "Install Geth"
 apt-get install -y software-properties-common

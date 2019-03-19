@@ -11,4 +11,10 @@ cpus: 1
 # Virtual machine RAM
 memory: 2048
 
-domain: eth.devel
+# Ethereum Proof-of-Authority
+# Domains
+
+dashboard: eth.devel
+faucet: faucet.eth.devel
+wallet: wallet.eth.devel
+stats: stats.eth.devel
