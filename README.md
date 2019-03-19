@@ -1,12 +1,10 @@
-# eth-node - All in One under vagrant development machine
+# Ethereum Private Network - All in One with vagrant development machine
 
 Ethereum Proof-of-Authority vagrant with provision based on pregenerated test accounts. 
-Blockchain Genesis for conract development.
-
-There are:
+Private Ethereum Network for raipd conract development and tests. It's basically fully centralized, only 
+for tests.
 
 - Bootnode, Stats, Wallet, Faucet (without authorization)
-- Two Sealers running on machine
-- Some pregenerated Wallets with test pass
 - Automated puppeth script
-- All run on one server
+- Two Sealers running on machine
+- Some pregenerated wallets with test password
