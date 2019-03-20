@@ -14,7 +14,20 @@ memory: 2048
 # Ethereum Proof-of-Authority
 # Domains
 
-dashboard: eth.devel
-faucet: faucet.eth.devel
-wallet: wallet.eth.devel
-stats: stats.eth.devel
+network_name: flotea
+genesis_file: /app/vagrant/config/genesis/flotea.json
+secret_api_password: test7
+
+domain: eth.devel
+
+# Pregenerated accounts
+accounts: {
+  account_main: 0xb2ba413fba6361bacc7a2055c2b28d6c93cf138e,
+  account_alloc: 0x3e216b18e24c6cbe4c68e68b8c7bfebd664526c4,
+  account_sealer_1: 0x59e3dfd51852cf0a0710b50982ce0de91576abf6,
+  account_sealer_2: 0x390c1c74d1d5ab47a876eab170ab98b5bb864165,
+  account_empty_1: 0xac5a29b299e6fc030abe9a23b16f05123136922c,
+  account_empty_2: 0xc17cdea27b2a4ff2ec0d52b2b61d41ebd55bad2b
+}
+
+location: /home/vagrant
