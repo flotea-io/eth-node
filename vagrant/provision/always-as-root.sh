@@ -8,8 +8,9 @@ function info {
 
 info "Start EthNode"
 #service ethnode start
-#service sealer01 start
-#service sealer02 start
+service sealer01 start
+service sealer02 start
+docker ps
 
 
 info "Main - Hello Dev - You probably can try do something now"

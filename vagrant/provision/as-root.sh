@@ -42,11 +42,11 @@ apt-get install -y nodejs
 info "Install go lang"
 sudo snap install go --classic
 
-#info "Init ethnode, sealers service"
+info "Init sealers service"
 #systemctl enable /app/vagrant/config/ethnode.service
-#systemctl enable /app/vagrant/config/sealer01.service
-#systemctl enable /app/vagrant/config/sealer02.service
-#echo "Done!"
+systemctl enable /app/vagrant/config/sealer01.service
+systemctl enable /app/vagrant/config/sealer02.service
+echo "Done!"
 
 info "Usermod Docker"
 usermod -aG docker vagrant
